@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.admin.contact.AddActivity">
+
+    <EditText
+        android:id="@+id/edtName"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/add_form.height"
+        android:layout_margin="@dimen/add_margin"
+        android:background="@drawable/border"
+        android:hint="@string/add_name_hint"
+        android:inputType="text"
+        android:paddingLeft="@dimen/add_padding.left"
+        android:textSize="@dimen/add_text.size" />
+
+    <EditText
+        android:id="@+id/edtPhone"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/add_form.height"
+        android:layout_margin="@dimen/add_margin"
+        android:background="@drawable/border"
+        android:hint="@string/add_phone_hint"
+        android:inputType="number"
+        android:paddingLeft="@dimen/add_padding.left"
+        android:textSize="@dimen/add_text.size" />
+
+    <EditText
+        android:id="@+id/edtAddress"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/add_form.height"
+        android:layout_margin="@dimen/add_margin"
+        android:background="@drawable/border"
+        android:hint="@string/add_address_hint"
+        android:paddingLeft="@dimen/add_padding.left"
+        android:textSize="@dimen/add_text.size" />
+
+    <RadioGroup
+        android:id="@+id/radioGender"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/add_form.height"
+        android:layout_margin="@dimen/add_margin"
+        android:background="@drawable/border"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/add_padding.left"
+        android:paddingRight="@dimen/add_padding.left"
+        android:weightSum="3">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Gender"
+            android:textSize="@dimen/add_text.size" />
+
+        <RadioButton
+            android:id="@+id/radioMale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="Male"
+            android:textSize="@dimen/add_text.size" />
+
+        <RadioButton
+            android:id="@+id/radioFemale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Female"
+            android:textSize="@dimen/add_text.size" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/add_margin"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/add_add"
+            android:textSize="@dimen/add_text.size" />
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/add_cancel"
+            android:textSize="@dimen/add_text.size" />
+    </LinearLayout>
+</LinearLayout>
