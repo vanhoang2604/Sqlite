@@ -16,7 +16,7 @@ import java.util.List;
 public class MyDatabase extends SQLiteOpenHelper {
 
     private static final int VERSION = 1;
-    private static final String DATABASE_NAME = "Contact_Manager2";
+    private static final String DATABASE_NAME = "Contact_Manager";
     private static final String TABLE_NAME = "Contact";
     private static final String ID = "Contact_Id";
     private static final String NAME = "Contact_Name";
@@ -41,7 +41,6 @@ public class MyDatabase extends SQLiteOpenHelper {
                 TIME + " TEXT, " +
                 GENDER + " TEXT" + ")";
         db.execSQL(script);
-
     }
 
     @Override

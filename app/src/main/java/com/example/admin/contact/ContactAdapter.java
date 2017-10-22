@@ -13,27 +13,27 @@ import java.util.List;
  * Created by Admin on 10/18/2017.
  */
 
-public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.MyViewHolder>  {
+public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.MyViewHolder> {
     private List<Contact> contacts;
     private Context mContext;
     private LayoutInflater mInflater;
 
-    public ContactAdapter(List<Contact> contacts,Context context){
-        this.mContext=context;
-        this.contacts=contacts;
-        this.mInflater=LayoutInflater.from(context);
+    public ContactAdapter(List<Contact> contacts, Context context) {
+        this.mContext = context;
+        this.contacts = contacts;
+        this.mInflater = LayoutInflater.from(context);
     }
 
 
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View itemView = mInflater.inflate(R.layout.item_list_contact,parent,false);
+        View itemView = mInflater.inflate(R.layout.item_list_contact, parent, false);
         return new MyViewHolder(itemView);
     }
 
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
-        Contact contact=contacts.get(position);
+        Contact contact = contacts.get(position);
         holder.mTvName.setText(contact.getName());
     }
 
